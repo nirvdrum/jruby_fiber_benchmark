@@ -1,7 +1,7 @@
 require 'bundler/setup'
 require 'sidekiq'
 
-if ENV.has_key?('USE_FIBER_POOL')
+if ENV['USE_FIBER_POOL'].to_s.downcase == 'true'
   $stderr.puts 'Using fiber pool'
   
   if defined?(Sidekiq::Processor)
