@@ -8,8 +8,7 @@ if ENV.has_key?('USE_FIBER_POOL')
     require_relative 'lib/celluloid/task_pooled_fiber'
   
     [Sidekiq::Fetcher, Sidekiq::Manager, Sidekiq::Processor, Sidekiq::Scheduled::Poller].each do |klass|
-#      klass.task_class(Celluloid::TaskPooledFiber)
-      klass.task_class(Celluloid::TaskThread)
+      klass.task_class(Celluloid::TaskPooledFiber)
     end
   end
 end
