@@ -24,9 +24,10 @@ The benchmark code requires two processes.  The first will run the Sidekiq daemo
 Redis by the second.  The second process will also monitor the Sidekiq queue size to report total time for completion.
 
 The Sidekiq daemon process can be run in one of two ways.  The first is just the stock Sidekiq system.  The second,
-controlled by use of the `USE_FIBER_POOL` environment variable, will monkeypatch Sidekiq to use a TaskFiberPool
-implementation in Celluloid.  This will function identically to stock Sidekiq/Celluloid with the notable exception that
-an internal Fiber pool will be used to recycle old Fibers.
+controlled by use of the `USE_FIBER_POOL` environment variable, will monkeypatch Sidekiq to use a
+[TaskFiberPool](https://github.com/celluloid/celluloid/pull/371) implementation in Celluloid.  This will function
+identically to stock Sidekiq/Celluloid with the notable exception that an internal Fiber pool will be used to recycle
+old Fibers.
 
 Running the Sidekiq daemon without the Fiber pool:
 
