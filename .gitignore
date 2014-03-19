@@ -2,6 +2,7 @@
 *.rbc
 .bundle
 .config
+.idea
 .ruby-version
 coverage
 InstalledFiles
