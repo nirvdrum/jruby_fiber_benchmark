@@ -15,7 +15,7 @@ Prerequisites
 
 This is a pretty standard and simple Ruby application.  It should work with any Ruby implementation targeting the 1.9+
 API.  For my purposes I used JRuby 1.7.10 and JRuby 1.7.11.  You will also need Bundler if you wish to run the code
-without modification.  Since this is also testing through Sidekiq, you'll need to have Redis running on localhost:6379.
+without modification.  Since this is also testing through Sidekiq, you'll need to have Redis running on `localhost:6379`.
 
 Running
 -------
