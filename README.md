@@ -1,7 +1,7 @@
 JRuby Fiber Benchmark
 =====================
 
-This is a simple project intended to benchmark Fiber performance in different JRuby versions and with other code
+This is a simple project intended to benchmark Fiber performance in different JRuby versions and with other Fiber
 modifications.  The Fiber code is stressed by way of a no-op Sidekiq job.  Sidekiq performance is ultimately the
 motivating driver here. Sidekiq is tightly coupled to Celluloid and makes heavy use of Celluloid's TaskFibers, which
 as the name implies, are tightly coupled to Ruby's Fibers.  While this is an indirect way of testing Fiber performance,
