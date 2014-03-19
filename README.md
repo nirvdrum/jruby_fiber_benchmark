@@ -41,7 +41,7 @@ Running the Sidekiq daemon with the Fiber pool:
 USE_FIBER_POOL=true bundle exec sidekiq -r noop_worker.rb  -c 100 > /dev/null
 ```
 
-For my testing purposes I ran the Sidekiq process with 100 workers.  STDOUT is redirected to /dev/null just to ensure
+For my testing purposes I ran the Sidekiq process with 100 workers. `STDOUT` is redirected to `/dev/null` just to ensure
 that I/O buffering doesn't adversely impact timing results.
 
 
